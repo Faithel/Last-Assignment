@@ -25,18 +25,18 @@ Customer::Customer(const string name, const float money, const int happiness, co
 :m_numThings (0), m_name (name), m_happiness (happiness), m_store (store),
  m_money (money) {}
 
-bool Customer::buy_stuff(product & items[])
+bool Customer::buy_stuff(const product items[])
 {
   int chance, item;
   bool buy, confirm;
 
   chance = rand % 101;
-
+/*
   if (chance < 50)
      buy = true;
   else if (chance >= 50)
      buy = false;
-
+*///put in the sell stuff function
   if (buy == true)
   {
     item = rand % 7;
