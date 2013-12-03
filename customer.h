@@ -24,7 +24,7 @@ class Customer
 {
   private:
     Product m_things[POCKET_SIZE];
-    int m_numThingsl;
+    int m_numThings;
     string m_name;
     int m_happiness;
     int m_store;
