@@ -78,6 +78,8 @@ main.cpp
     comicShop.customers_leave(people[], numPeople);
     bar.customers_leave(people[], numPeople);
     
+    //SHUFFLE ARRAY (people[])
+    
     for(int i = 0; i < numPeople; i++)
     {
       tempNum = rand() % 20;
