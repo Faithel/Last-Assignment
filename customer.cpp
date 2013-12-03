@@ -78,7 +78,6 @@ Product Customer::setItems(const Product thing)
 
 void Customer::pelt(Customer victim)
 {
-  
   if (m_numThings == 0)
   {
     m_happiness -= 25;
