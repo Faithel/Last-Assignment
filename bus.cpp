@@ -56,10 +56,10 @@ void customers_leave (Customer street[], int numOfCusts)
   return;
 }  
   
-Business::Business(const string name):Product storeItems[],
+Business::Business(const string name)
+:m_name(name)
 {
-  m_name = name;
-  for(int i = 0; i < m_items; i++)
+  for(int i = 0; i < NUM_OF_ITEMS; i++)
   {
     
   }
