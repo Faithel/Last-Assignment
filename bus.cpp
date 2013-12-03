@@ -20,7 +20,7 @@ void business::addCustomer(customer c)
   m_sizeCusts++;
   return;
 }
-
+ 
 void sell_stuff()
 {
   bool success;
