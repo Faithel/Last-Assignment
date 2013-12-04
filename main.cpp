@@ -5,6 +5,8 @@
 //Final Assingment, OOP, Bar people vs. Comic People
 
 #include <fstream>
+#include <cstdlib>
+#include <ctime>
 #include "business.h"
 
 
@@ -21,6 +23,8 @@ main.cpp
   
   //inits the People
   
+  srand(time(NULL));
+  
   fin.open("people.txt");
   while(fin.good())
   {
@@ -31,7 +35,7 @@ main.cpp
       getline(fin, tempNum, '\n');
       people[i].setPref(tempNum);
     }
-  };
+  }
   fin.close();
   
   //inits the Products for the businesses
@@ -42,11 +46,10 @@ main.cpp
     for(int i = 0; i < (NUM_OF_ITEMS - 1); i++)
     {
       getline(moeSet, cost, ' ');
-      bar.m_items[i].m_price = cost;
       getline(moeSet, tempName, '\n');
-      bar.m_items[i].m_name = tempName;
+      bar.modProd(i, cost, tempName);
     }
-  };
+  }
   moeSet.close();
   
   comicSet.open("CBS_items.txt");
@@ -55,12 +58,16 @@ main.cpp
     for(int i = 0; i < (NUM_OF_ITEMS - 1); i++)
     {
       getline(moeSet, cost, ' ');
-      comicShop.m_items[i].m_price = cost;
       getline(moeSet, tempName, '\n');
-      comicShop.m_items[i].m_name = tempName;
+      bar.modProd(i, cost, tempName);
     }
-  };
+  }
   comicSet.close();
+  
+  for(int i = 0; i < numPeople; i++)
+  {
+    cout << people[i] << endl;
+  }
   
   while(numPeople > 1 && numRounds <= 20)
   {
@@ -103,18 +110,32 @@ main.cpp
     //PLACEHOLDER
     for (int i = 0; i < numPeople; i++)
     {
-      if (people[i].getHappy()< 10)
+      
+      if (people[i].getHappy() < 10)
       {
-        people[numPeople-1] = people[i];
-        people[i] = people[i-1];
+        tempCust = people[numPeople-1];
+        people[numPeople-1]=people[i];
+        people[i] = tempCust;
+        numPeople--;
+        cout << people[i].getName() << " was taken to the Shelbyville House of Desperation" << endl;
       }
+      
+      else if (people[i].getHappy() >= 90)
+      {
+        tempCust = people[numPeople-1];
+        people[numPeople-1]=people[i];
+        people[i] = tempCust;
+        numPeople--;
+        cout << people[i].getName() << " went Shelbyville to lorde over those in the House of Desperation" << endl;
+      }
+      
     }
     
     for(int i = 0; i < numPeople; i++)
     {
-      cout << people[i];
+      cout << people[i] << endl;
     }
-  }; 
+  } 
 
   return 0;
 }
