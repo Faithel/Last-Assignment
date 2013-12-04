@@ -30,7 +30,7 @@ class Business
     //Desc: calls Customer member function, adds money to business, gives cust product
     //Pre: none 
     //Post: returns nothing
-    void sell_stuff(Customer cust[])
+    void sell_stuff(Customer cust[]);
     //Desc: 
     //Pre: 
     //Post: 
