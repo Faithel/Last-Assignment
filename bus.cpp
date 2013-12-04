@@ -54,15 +54,14 @@ void customers_leave (Customer street[], int numOfCusts)
   return;
 }  
 
-/*  
-Business::Business(const string name)
-:m_name(name)
+
+void modProd (int i, float proPrice, string proName)
 {
-  for(int i = 0; i < NUM_OF_ITEMS; i++)
-  {
-    //unneeded, inlined, only sets business name 
-  }  
+  m_items[i].m_price = proPrice;
+  m_itmes[i].m_name = proName;
+  return;
 }
-*/
+
+
 
 #endif
