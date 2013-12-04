@@ -55,13 +55,16 @@ void customers_leave (Customer street[], int numOfCusts)
   numOfCusts = 0;
   return;
 }  
-  
+
+/*  
 Business::Business(const string name)
 :m_name(name)
 {
   for(int i = 0; i < NUM_OF_ITEMS; i++)
   {
-    
-  }
+    //unneeded, inlined, only sets business name 
+  }  
 }
+*/
+
 #endif
