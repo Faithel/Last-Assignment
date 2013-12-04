@@ -12,12 +12,15 @@
 
 using namespace std;
 
+const int NUM = 10001, SMILE = 101;
+
+
 Customer::Customer()
 :m_numThings (0)
 {
   srand(time(NULL));
-  m_happiness = rand % 101;
-  m_money = static_cast <float> (rand % 10001) / 100.00;
+  m_happiness = rand % SMILE;
+  m_money = static_cast <float> (rand % NUM) / 100.00;
 }
 
 Customer::Customer(const string name, const float money, const int happiness, const int
