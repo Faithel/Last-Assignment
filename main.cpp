@@ -100,7 +100,15 @@ main.cpp
           pelt(people[tempNum]);
     }
     
-    
+    //PLACEHOLDER
+    for (int i = 0; i < numPeople; i++)
+    {
+      if (people[i].getHappy()< 10)
+      {
+        people[numPeople-1] = people[i];
+        people[i] = people[i-1];
+      }
+    }
     
     for(int i = 0; i < numPeople; i++)
     {
