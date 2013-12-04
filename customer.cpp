@@ -118,9 +118,24 @@ ostream& operator<< (ostream& out, const Customer& python)
     out << "none";
   for (int i = 0; i < python.m_numThings; i++)
   {
-    cout << python.m_things[i] << ((i < python.m_numThings - 1)? ", " : "");
+    cout << python.m_things[i].m_name << ((i < python.m_numThings - 1)? ", " : "");
   }
   cout << endl;
   return out;
 }
 
+Custromer Customer::operator= (Customer& person)
+{
+  person.setHappy(m_happiness);
+  person.setMoney(m_money);
+  person.setName(m_name);
+  person.setPref(m_store);
+  person.setNumThings(m_numThings);
+  for(int i = 0, i < m_numThings; i++)
+  {
+    person.things[i].m_name = m_things[i].m_name;
+    person.things[i].m_price = m_things[i].m_price;
+  }
+  
+  return person;
+}
