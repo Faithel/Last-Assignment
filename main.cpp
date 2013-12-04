@@ -88,6 +88,7 @@ main.cpp
       people[shuffleNum] = tempCust;
     }
     
+    //attacking people
     for(int i = 0; i < numPeople; i++)
     {
       tempNum = rand() % 20;
@@ -98,6 +99,8 @@ main.cpp
         else 
           pelt(people[tempNum]);
     }
+    
+    
     
     for(int i = 0; i < numPeople; i++)
     {
