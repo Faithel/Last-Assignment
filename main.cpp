@@ -94,7 +94,7 @@ main.cpp
       tempNum = rand() % 20;
       if (i = tempNum)
       else
-        if (people[i].m_shop == people[tempNum].m_shop)  
+        if (people[i].getPref() == people[tempNum].getPref())  
           steal(people[tempNum]);
         else 
           pelt(people[tempNum]);
