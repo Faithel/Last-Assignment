@@ -22,7 +22,7 @@ class Business
     int m_sizeCusts;
     float m_cashRegister;
   public:
-    Business(const string name):string m_name = name,
+    Business(const string name):string m_name = name {}
     //Desc: adds customer into business
     //Pre: none
     //Post: adds cusomtomer into busness
