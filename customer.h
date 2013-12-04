@@ -34,61 +34,35 @@ class Customer
     Customer();
     Customer(const string name, const float money, const int happiness,
              const int store);
-    //Desc:
-    //Pre: none
-    //Post:
+
     bool buy_stuff(const Business shop);
-    //Desc:
-    //Pre: none
-    //Post:
+
     string getName() const {return m_name;}
-    //Desc:
-    //Pre: none
-    //Post:
+
     float getMoney() const {return m_money;}
-    //Desc:
-    //Pre: none
-    //Post:
+
     float modMoney(const float money) {return m_money -= money;}
-    //Desc:
-    //Pre: none
-    //Post:
+
     float setMoney(const float money) {return m_money = money;}
-    //Desc:
-    //Pre: none 
-    //Post:    
+   
     string setName(const string name) {return m_name = name;}
-    //Desc:
-    //Pre: none
-    //Post:
+
     int getPref() const {return m_store;}
-    //Desc:
-    //Pre: none
-    //Post:    
+
     int setPref(const int store) {return m_store = store;}
-    //Desc:
-    //Pre: none
-    //Post:   
+ 
     Product setItems(const Product thing); 
-    //Desc:
-    //Pre: none
-    //Post:    
+   
     void pelt(Customer victim);
-    //Desc:
-    //Pre: none
-    //Post:
+  
     void steal(Customer victim);
     //Desc: Accessor. 
     //Pre: none
     //Post: Returns happiness of customer
     int getHappy() const {return m_happiness;}
-    //Desc: 
-    //Pre: none
-    //Post: 
+
     int setHappy(const int newHappy) {return m_happiness = newHappy;} 
-    //
-    //
-    //
+
     Customer operator= (Customer& person);
     
   friend ostream& operator<< (ostream& out, const Customer& python);
