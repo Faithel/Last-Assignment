@@ -14,9 +14,10 @@ main.cpp
   Business bar("bar"), comicShop("Comic Book Shop");
   
   string tempName;
-  int tempNum, numPeople, numRounds;
+  int tempNum, numPeople, numRounds, shuffleNum;
   float cost;
   ifstream fin, moeSet, comicSet;
+  Customer tempCust;
   
   //inits the People
   
@@ -79,6 +80,13 @@ main.cpp
     bar.customers_leave(people[], numPeople);
     
     //SHUFFLE ARRAY (people[])
+    for(int i = 0; i < PEOPLE; i++)
+    {
+      shuffleNum = rand() % PEOPLE;
+      tempCust = people[i];
+      people[i] = people[shuffleNum];
+      people[shuffleNum] = tempCust;
+    }
     
     for(int i = 0; i < numPeople; i++)
     {
