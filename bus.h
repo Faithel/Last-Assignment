@@ -10,8 +10,8 @@
 
 using namespace std;
 
-const int NUM_OF_ITEMS = 8
-const int NUM_OF_CUSTS = 12
+const int NUM_OF_ITEMS = 8;
+const int NUM_OF_CUSTS = 12;
 
 class Business
 {
