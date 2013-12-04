@@ -85,7 +85,6 @@ void Customer::pelt(Customer victim)
   {
     m_happiness += 5;
     victim.m_happiness -= 20;
-    m_things[m_numThings] = 0;
     m_numThings--;
   }
 
