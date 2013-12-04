@@ -36,7 +36,7 @@ void sell_stuff()
     {
       
       //transfer product to the customer (in array) and transfer funds
-      
+       
     }
   }
   return;
