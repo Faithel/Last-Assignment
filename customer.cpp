@@ -25,7 +25,7 @@ Customer::Customer(const string name, const float money, const int happiness, co
 :m_numThings (0), m_name (name), m_happiness (happiness), m_store (store),
  m_money (money) {}
 
-bool Customer::buy_stuff(const product items[])
+bool Customer::buy_stuff(const product item)
 {
   int chance, item;
   bool buy, confirm;
@@ -37,24 +37,22 @@ bool Customer::buy_stuff(const product items[])
   else if (chance >= 50)
      buy = false;
 
-  if (buy == true)
-  {
-    item = rand % 7;
-    
 //decide if they will buy something (done)
 //choose a random product from the business
 //if they can afford it, bus gets money, cust loses money, +product to pocket, +15 happiness,
 //if they can't afford it, happiness -10 
     
     
-    if (shop.m_purchase[item].m_price <= m_money)
+    if (item.m_price <= m_money)
     {
       m_happiness += 15;
-      modMoney(-shop.m_purchase[item].m_price);
-      m_things[m_numThings] = shop.m_purchase[item];
+      modMoney(-item.m_price);
+      m_things[m_numThings].m_price = item.m_price;
+      m_things[m_numThings].m_name = item.m_name;
       m_numThings++;
       confirm = true;
     }
+    
     else
     {
       m_happiness -= 10;
