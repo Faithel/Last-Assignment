@@ -21,22 +21,20 @@ void business::addCustomer(customer c)
   return;
 }
  
-void sell_stuff()
+void sell_stuff(Customer cust[])
 {
   bool success;
-  ifstream fin;
-  ofstream fout;
+  float money;
+  int item;
   
-  m_custs[i].modMoney(float price)
-  
-
   for (int i = 0; i < m_sizeCusts; i++)
   {
-    if (c.buy_something(Product & item) == success)
+    item = rand()% NUM_OF_ITEMS - 1;
+    
+    if (cust[i].buy_something(m_items[item]) == success)
     {
-      
+      money = addCash(items[i].m_price)
       //transfer product to the customer (in array) and transfer funds
-       
     }
   }
   return;
