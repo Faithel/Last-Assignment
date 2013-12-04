@@ -40,8 +40,14 @@ class Business
     //Post: 
     float getCash() const
              {return m_cashRegister;}
+    //Desc:
+    //Pre: none
+    //Post:
     float addCash(float money){m_cashRegister += money;return m_cashRegister;}
-    
+    //Desc:
+    //Pre: none
+    //Post:
+    void modProd(int i, float proPrice, string proName);
 };
 
 #endif
