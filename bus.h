@@ -20,20 +20,27 @@ class Business
     string m_name;
     Customer m_custs[NUM_OF_CUSTS];
     int m_sizeCusts;
+    float m_cashRegister;
   public:
     Business(const string name):string m_name = name,
     //Desc: adds customer into business
     //Pre: none
     //Post: adds cusomtomer into busness
-    addCustomer(Customer c){m_sizeCusts++; return;}
+    void addCustomer(Customer c){m_sizeCusts++; return;}
     //Desc:
     //Pre:
     //Post:
-    sell_stuff()
+    void sell_stuff()
     //Desc:
     //Pre:
     //Post:
-    customers_leave(Customer custs[], int numOfCusts);
+    void customers_leave(Customer custs[], int numOfCusts);
+    //Desc:
+    //Pre:
+    //Post:
+    float getCash() const
+             {return m_cashRegister;}
+    float addCash(float money){m_cashRegister += money;return m_cashRegister;}
 };
 
 #endif
