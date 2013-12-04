@@ -25,22 +25,23 @@ class Business
     Business(const string name):string m_name = name {}
     //Desc: adds customer into business
     //Pre: none
-    //Post: adds cusomtomer into busness
+    //Post: returns nothing
     void addCustomer(Customer c){m_sizeCusts++; return;}
-    //Desc:
-    //Pre:
-    //Post:
-    void sell_stuff()
-    //Desc:
-    //Pre:
-    //Post:
+    //Desc: calls Customer member function, adds money to business, gives cust product
+    //Pre: none 
+    //Post: returns nothing
+    void sell_stuff(Customer cust[])
+    //Desc: 
+    //Pre: 
+    //Post: 
     void customers_leave(Customer custs[], int numOfCusts);
-    //Desc:
-    //Pre:
-    //Post:
+    //Desc:  
+    //Pre: 
+    //Post: 
     float getCash() const
              {return m_cashRegister;}
     float addCash(float money){m_cashRegister += money;return m_cashRegister;}
+    
 };
 
 #endif
