@@ -60,6 +60,10 @@ class Customer
     string setName(const string name) {return m_name = name;}
     //Desc:
     //Pre:
+    //Post:
+    int getPref() const {return m_store;}
+    //Desc:
+    //Pre:
     //Post:    
     int setPref(const int store) {return m_store = store;}
     //Desc:
