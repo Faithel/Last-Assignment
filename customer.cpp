@@ -31,20 +31,20 @@ bool Customer::buy_stuff(const product items[])
   bool buy, confirm;
 
   chance = rand % 101;
-/*
+
   if (chance < 50)
      buy = true;
   else if (chance >= 50)
      buy = false;
-*///put in the sell stuff function
+
   if (buy == true)
   {
     item = rand % 7;
     
-    //open certain stream
-    //gitline 
-    //add that item to array items
-    //in bus.cpp call buy_stuff() and access items[] 
+//decide if they will buy something (done)
+//choose a random product from the business
+//if they can afford it, bus gets money, cust loses money, +product to pocket, +15 happiness,
+//if they can't afford it, happiness -10 
     
     
     if (shop.m_purchase[item].m_price <= m_money)
