@@ -86,7 +86,11 @@ class Customer
     //Pre: none
     //Post: 
     int setHappy(const int newHappy) {return m_happiness = newHappy;} 
-  
+    //
+    //
+    //
+    Customer operator= (Customer& person);
+    
   friend ostream& operator<< (ostream& out, const Customer& python);
 };
 
