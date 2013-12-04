@@ -12,7 +12,7 @@
 
 using namespace std;
 
-const int NUM = 10001, SMILE = 101;
+const int NUM = 24001, SMILE = 101;
 
 
 Customer::Customer()
